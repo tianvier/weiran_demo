@@ -47,16 +47,25 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.sour-lemon.com"
+            "url": "https://packeton.sour-lemon.com"
         }
     ],
     "scripts": {
+        "poppy": [
+            "./vendor/bin/poppy",
+            "php artisan poppy:optimize",
+            "php artisan py-core:permission init"
+        ],
         "post-install-cmd": [
             "php artisan ide-helper:generate"
         ],
         "post-update-cmd": [
             "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta"
+            "php artisan ide-helper:meta",
+            "./vendor/bin/poppy",
+            "php artisan poppy:optimize",
+            "php artisan vendor:publish --force --tag=poppy-mix",
+            "php artisan py-core:permission init"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
