@@ -24,7 +24,7 @@
 
 ```
 # Internal install
-$ composer create-project poppy/project poppy_v4 ^4.2 --repository=https://packeton.sour-lemon.com
+$ composer create-project poppy/project poppy_v4 '^4.2' --repository=https://packeton.sour-lemon.com
 
 # Start service server
 $ cd poppy_v4
