@@ -29,9 +29,10 @@
         "poppy/mgr-page": "4.2.*"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "itsgoingd/clockwork": "~5.0",
         "barryvdh/laravel-ide-helper": "~2.6",
-        "poppy/faker": "~3.2",
+        "poppy/faker": "4.2.*",
         "doctrine/dbal": "^2.6"
     },
     "autoload": {

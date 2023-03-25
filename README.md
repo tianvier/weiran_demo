@@ -2,8 +2,8 @@
 
 本项目是基于 Laravel 6 LTS 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 管理, 组件, 使用 composer 进行模块化安装
 
-- 项目文档 : https://poppy.wulicode.com/doc/
-- V3 Demo : https://v3.wulicode.com
+- 项目文档 : https://i.huowanes.com/docs/poppy
+- V3 Demo : https://v4.wulicode.com
 
 ## 介绍
 
@@ -23,14 +23,11 @@
 **初始化项目并启动服务**
 
 ```
-# install
-$ composer create-project poppy/project poppy_v3 ^3.2
-
 # Internal install
-$ composer create-project poppy/project poppy_v3 ^3.2 --repository=https://packagist.sour-lemon.com
+$ composer create-project poppy/project poppy_v4 ^4.2 --repository=https://packeton.sour-lemon.com
 
 # Start service server
-$ cd poppy_v3
+$ cd poppy_v4
 $ php artisan serve
 Laravel development server started: <http://127.0.0.1:8000>
 [Sun Sep 19 17:19:52 2021] PHP 7.4.23 Development Server (http://127.0.0.1:8000) started
@@ -64,7 +61,7 @@ $ curl 127.0.0.1:8000/mgr-page/test
 
 **创建数据库**
 
-在初始化数据库之前需要先创建一个空数据库, 数据库类型为 `utf8mb4_general_ci`, 可以保证 emoji 类型的数据正常存储, 这里我定义名字为 `poppy_v3`
+在初始化数据库之前需要先创建一个空数据库, 数据库类型为 `utf8mb4_general_ci`, 可以保证 emoji 类型的数据正常存储, 这里我定义名字为 `poppy_v4`
 
 在 `.env` 文件中配置账号和密码
 
@@ -72,7 +69,7 @@ $ curl 127.0.0.1:8000/mgr-page/test
 # Database Config
 # ------------------------------------
 DB_HOST=127.0.0.1
-DB_DATABASE=poppy_v3
+DB_DATABASE=poppy_v4
 DB_USERNAME=duoli
 DB_PASSWORD=null
 ```
@@ -108,15 +105,15 @@ Init Rbac Permission Success
 $ php artisan py-system:user create_user
 
  Please input passport!:
- > v3_admin
+ > v4_admin
 
  Please input password!:
- > v3_admin
+ > v4_admin
 
  Please input role name!:
  > root
 
-User v3_admin created
+User v4_admin created
 ```
 
 创建开发者
@@ -125,15 +122,15 @@ User v3_admin created
 $ php artisan py-system:user create_user
 
  Please input passport!:
- > v3_develop
+ > v4_develop
 
  Please input password!:
- > v3_develop
+ > v4_develop
 
  Please input role name!:
  > develop
 
-User v3_develop created
+User v4_develop created
 ```
 
 ## 登录
