@@ -52,9 +52,15 @@
         }
     ],
     "scripts": {
-        "poppy": [
+        "poppy-init": [
+            "php artisan poppy:migrate",
+            "php artisan py-system:install",
+            "php artisan py-system:user create_user"
+        ],
+        "poppy-update": [
             "./vendor/bin/poppy",
             "php artisan poppy:optimize",
+            "php artisan vendor:publish --force --tag=poppy-mix",
             "php artisan py-core:permission init"
         ],
         "post-install-cmd": [
@@ -62,20 +68,15 @@
         ],
         "post-update-cmd": [
             "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta",
-            "./vendor/bin/poppy",
-            "php artisan poppy:optimize",
-            "php artisan vendor:publish --force --tag=poppy-mix",
-            "php artisan py-core:permission init"
+            "php artisan ide-helper:meta"
         ],
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "php artisan vendor:publish --force --tag=poppy-mix"
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan jwt:secret --force",
-            "@php artisan poppy:optimize"
+            "@php artisan vendor:publish --force --tag=poppy-mix"
         ]
     },
     "config": {
