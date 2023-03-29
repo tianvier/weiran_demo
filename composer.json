@@ -51,6 +51,13 @@
             "url": "https://packeton.sour-lemon.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "laravelcollective/html"
+            ]
+        }
+    },
     "scripts": {
         "poppy-init": [
             "php artisan poppy:migrate",
