@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
     backupStaticAttributes="false"
-    bootstrap="bootstrap/autoload.php"
+    bootstrap="storage/bootstrap/autoload.php"
+    cacheResultFile="storage/phpunit/.phpunit.cache/test-results"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
