@@ -69,7 +69,7 @@ return [
         'redis' => [
             'driver'     => 'redis',
             'connection' => 'default',
-            'queue'      => env('QUEUE_NAME', 'poppy'),
+            'queue'      => env('QUEUE_NAME', 'weiran'),
             'expire'     => 60,
         ],
 

@@ -1,9 +1,8 @@
 # 说明
 
-本项目是基于 Laravel 6 LTS 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 管理, 组件, 使用 composer 进行模块化安装
+本项目是基于 Laravel 10.x 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 管理, 组件, 使用 composer 进行模块化安装
 
-- 项目文档 : https://i.huowanes.com/docs/poppy
-- V3 Demo : https://v4.wulicode.com
+- 项目文档 : https://weiran.tech
 
 ## 介绍
 
@@ -24,7 +23,7 @@
 
 ```
 # Internal install
-$ composer create-project poppy/project poppy_v4 '^4.2' --repository=https://packeton.sour-lemon.com
+$ composer create-project weiran/project poppy_v4 '^4.2' --repository=https://packeton.sour-lemon.com
 
 # Start service server
 $ cd poppy_v4
@@ -37,7 +36,7 @@ Laravel development server started: <http://127.0.0.1:8000>
 
 ```
 # 快速创建模块
-$ php artisan poppy:make test -Q
+$ php artisan weiran:make test -Q
 ```
 
 > 因为默认框架中不包含 `/` 主页访问, 所以访问主页会报 404 错误码
@@ -61,7 +60,8 @@ $ curl 127.0.0.1:8000/mgr-page/test
 
 **创建数据库**
 
-在初始化数据库之前需要先创建一个空数据库, 数据库类型为 `utf8mb4_general_ci`, 可以保证 emoji 类型的数据正常存储, 这里我定义名字为 `poppy_v4`
+在初始化数据库之前需要先创建一个空数据库, 数据库类型为 `utf8mb4_general_ci`, 可以保证 emoji 类型的数据正常存储, 这里我定义名字为
+`poppy_v4`
 
 在 `.env` 文件中配置账号和密码
 
@@ -77,7 +77,7 @@ DB_PASSWORD=null
 **执行 migrate**
 
 ```
-$ php artisan poppy:migrate
+$ php artisan weiran:migrate
 Migration table created successfully.
 Migrating: 2018_02_27_144933_create_pam_account_table
 Migrated:  2018_02_27_144933_create_pam_account_table (0.05 seconds)
@@ -93,7 +93,7 @@ Init UserRole Ing...
 Init Role success
 Install User Roles Success
 Init Rbac Permission...
-(poppy.core.PermissionCommand) Import permission Success! 
+(weiran.core.PermissionCommand) Import permission Success! 
 Init Rbac Permission Success
 ```
 
@@ -153,4 +153,4 @@ http://127.0.0.1:8000/mgr-page/develop
 
 ## 反馈
 
-[Github Issues](https://github.com/imvkmark/poppy-project/issues)
+[Github Issues](https://github.com/weiran-tech/project/issues)

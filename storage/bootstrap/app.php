@@ -11,8 +11,8 @@
 */
 
 
-$app = new Poppy\Framework\Foundation\Application(
-	realpath(dirname(__DIR__, 2) . '/')
+$app = new Weiran\Framework\Foundation\Application(
+    realpath(dirname(__DIR__, 2) . '/')
 );
 
 /*
@@ -27,18 +27,18 @@ $app = new Poppy\Framework\Foundation\Application(
 */
 
 $app->singleton(
-	Illuminate\Contracts\Http\Kernel::class,
-	Poppy\Framework\Foundation\Http\Kernel::class
+    Illuminate\Contracts\Http\Kernel::class,
+    Weiran\Framework\Foundation\Http\Kernel::class
 );
 
 $app->singleton(
-	Illuminate\Contracts\Console\Kernel::class,
-	Poppy\Framework\Foundation\Console\Kernel::class
+    Illuminate\Contracts\Console\Kernel::class,
+    Weiran\Framework\Foundation\Console\Kernel::class
 );
 
 $app->singleton(
-	Illuminate\Contracts\Debug\ExceptionHandler::class,
-	Poppy\Framework\Foundation\Exception\Handler::class
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    Weiran\Framework\Foundation\Exception\Handler::class
 );
 
 /*
