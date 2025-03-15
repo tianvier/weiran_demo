@@ -53,6 +53,12 @@
             ]
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packeton.kejinxia.com"
+        }
+    ],
     "scripts": {
         "weiran-init": [
             "php artisan weiran:migrate",
