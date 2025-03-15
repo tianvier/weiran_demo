@@ -88,7 +88,7 @@ Migrated:  2018_02_27_144933_create_pam_account_table (0.05 seconds)
 
 ```
 $ php artisan system:install
-Start Install Lemon Framework!
+Start Install Weiran Framework!
 Init UserRole Ing...
 Init Role success
 Install User Roles Success
@@ -102,13 +102,13 @@ Init Rbac Permission Success
 创建管理员
 
 ```
-$ php artisan weiran:system:user create_user
+$ php artisan system:user create_user
 
  Please input passport!:
- > v4_admin
+ > weiran_root
 
  Please input password!:
- > v4_admin
+ > weiran_root
 
  Please input role name!:
  > root
@@ -116,22 +116,6 @@ $ php artisan weiran:system:user create_user
 User v4_admin created
 ```
 
-创建开发者
-
-```
-$ php artisan weiran:system:user create_user
-
- Please input passport!:
- > weiran_root
-
- Please input password!:
- > weiran_root
-
- Please input role name!:
- > develop
-
-User weiran_root created
-```
 
 ## 登录
 
