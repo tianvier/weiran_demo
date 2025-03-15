@@ -125,15 +125,6 @@ http://127.0.0.1:8000/mgr-page
 
 ![](./resources/docs/images/mgr-login.jpg)
 
-![](./resources/docs/images/mgr-page.jpg)
-
-**登录开发平台**
-
-http://127.0.0.1:8000/mgr-page/develop
-
-![](./resources/docs/images/dev-login.jpg)
-
-![](./resources/docs/images/dev-page.jpg)
 
 ## 反馈
 
