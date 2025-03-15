@@ -23,10 +23,10 @@
 
 ```
 # Internal install
-$ composer create-project weiran/project poppy_v4 '^4.2' --repository=https://packeton.sour-lemon.com
+$ composer create-project weiran/project weiran_v1 '^1.0.0-dev'
 
 # Start service server
-$ cd poppy_v4
+$ cd weiran_v1
 $ php artisan serve
 Laravel development server started: <http://127.0.0.1:8000>
 [Sun Sep 19 17:19:52 2021] PHP 7.4.23 Development Server (http://127.0.0.1:8000) started
@@ -61,7 +61,7 @@ $ curl 127.0.0.1:8000/mgr-page/test
 **创建数据库**
 
 在初始化数据库之前需要先创建一个空数据库, 数据库类型为 `utf8mb4_general_ci`, 可以保证 emoji 类型的数据正常存储, 这里我定义名字为
-`poppy_v4`
+`weiran_project_v1`
 
 在 `.env` 文件中配置账号和密码
 
@@ -69,8 +69,8 @@ $ curl 127.0.0.1:8000/mgr-page/test
 # Database Config
 # ------------------------------------
 DB_HOST=127.0.0.1
-DB_DATABASE=poppy_v4
-DB_USERNAME=duoli
+DB_DATABASE=weiran_project_v1
+DB_USERNAME=root
 DB_PASSWORD=null
 ```
 
@@ -87,7 +87,7 @@ Migrated:  2018_02_27_144933_create_pam_account_table (0.05 seconds)
 **执行安装**
 
 ```
-$ php artisan py-system:install
+$ php artisan system:install
 Start Install Lemon Framework!
 Init UserRole Ing...
 Init Role success
@@ -102,7 +102,7 @@ Init Rbac Permission Success
 创建管理员
 
 ```
-$ php artisan py-system:user create_user
+$ php artisan weiran:system:user create_user
 
  Please input passport!:
  > v4_admin
@@ -119,18 +119,18 @@ User v4_admin created
 创建开发者
 
 ```
-$ php artisan py-system:user create_user
+$ php artisan weiran:system:user create_user
 
  Please input passport!:
- > v4_develop
+ > weiran_root
 
  Please input password!:
- > v4_develop
+ > weiran_root
 
  Please input role name!:
  > develop
 
-User v4_develop created
+User weiran_root created
 ```
 
 ## 登录

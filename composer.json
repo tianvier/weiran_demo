@@ -32,6 +32,7 @@
         "roave/security-advisories": "dev-latest",
         "doctrine/dbal": "^3.0",
         "itsgoingd/clockwork": "^5.1",
+        "phpunit/phpunit": "^10.0",
         "barryvdh/laravel-ide-helper": "^3.0",
         "poppy/faker": "10.0.x-dev"
     },
@@ -55,14 +56,14 @@
     "scripts": {
         "weiran-init": [
             "php artisan weiran:migrate",
-            "php artisan weiran:system:install",
-            "php artisan weiran:system:user create_user"
+            "php artisan system:install",
+            "php artisan system:user create_user"
         ],
         "weiran-update": [
             "./vendor/bin/weiran",
             "php artisan weiran:optimize",
             "php artisan vendor:publish --force --tag=weiran-mix",
-            "php artisan weiran:core:permission init"
+            "php artisan core:permission init"
         ],
         "post-install-cmd": [
             "php artisan ide-helper:generate"
