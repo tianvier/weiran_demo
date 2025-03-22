@@ -22,14 +22,45 @@
 **初始化项目并启动服务**
 
 ```
-# Internal install
+# Install
 $ composer create-project weiran/project weiran_v1 '^1.0.0-dev'
+
+# Create Database 
+> mysql -u root -p
+> create database weiran_project_v1 charset=utf8mb4;
+
+# Migrate to Database
+$ php artisan migrate
+
+   INFO  Preparing database.  
+
+  Creating migration table ................................................. 21ms DONE
+
+   INFO  Running migrations.  
+
+  2018_02_27_144933_create_pam_account_table ............................... 20ms DONE
+  2018_02_27_144935_create_pam_permission_role_table ....................... 16ms DONE
+  2018_02_27_144935_create_pam_permission_table ............................ 35ms DONE
+  2018_02_27_144935_create_pam_role_table .................................. 11ms DONE
+  2018_02_27_144936_create_pam_role_account_table .......................... 34ms DONE
+  2018_02_27_144938_create_sys_config_table ................................ 39ms DONE
+  2018_03_12_213504_create_pam_log_table ................................... 11ms DONE
+  2018_07_09_164941_alter_pam_log_add_field_parent_id ...................... 20ms DONE
+  2018_12_24_105815_create_sys_failed_jobs_table ........................... 17ms DONE
+  2021_04_27_183109_create_pam_ban_table ................................... 28ms DONE
+  2021_04_27_183141_create_pam_token_table ................................. 25ms DONE
+  2021_06_29_233109_alt_pam_ban_add_account_type ........................... 17ms DONE
+  2022_12_08_113154_alter_pam_account_table_add_uem_index .................. 34ms DONE
+  2023_02_24_102135_alter_pam_account_table_add_note_field ................. 21ms DONE
+  2023_04_12_154447_alt_sys_config_table_add_key_index ..................... 10ms DONE
+  2024_04_08_174443_add_uuid_to_sys_failed_jobs_table ...................... 26ms DONE
 
 # Start service server
 $ cd weiran_v1
 $ php artisan serve
-Laravel development server started: <http://127.0.0.1:8000>
-[Sun Sep 19 17:19:52 2021] PHP 7.4.23 Development Server (http://127.0.0.1:8000) started
+
+  INFO  Server running on [http://127.0.0.1:8000].  
+  Press Ctrl+C to stop the server
 ```
 
 **创建 test 模块**

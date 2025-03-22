@@ -53,12 +53,6 @@
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packeton.kejinxia.com"
-        }
-    ],
     "scripts": {
         "weiran-init": [
             "php artisan weiran:migrate",
@@ -68,7 +62,7 @@
         "weiran-update": [
             "./vendor/bin/weiran",
             "php artisan weiran:optimize",
-            "php artisan vendor:publish --force --tag=weiran-mix",
+            "php artisan vendor:publish --force --tag=weiran-assets",
             "php artisan core:permission init"
         ],
         "post-install-cmd": [
@@ -84,7 +78,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan jwt:secret --force",
-            "@php artisan vendor:publish --force --tag=weiran-mix"
+            "@php artisan vendor:publish --force --tag=weiran-assets"
         ]
     },
     "config": {

@@ -12,7 +12,7 @@
 
 
 $app = new Weiran\Framework\Foundation\Application(
-    realpath(dirname(__DIR__, 2) . '/')
+    realpath(dirname(__DIR__) . '/')
 );
 
 /*
