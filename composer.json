@@ -22,7 +22,6 @@
         "laravel/framework": "10.*",
         "intervention/image": "2.*",
         "laravelcollective/html": "6.*",
-        "predis/predis": "~1.1",
         "weiran/framework": "1.0.x-dev",
         "weiran/system": "1.0.x-dev",
         "weiran/core": "1.0.x-dev",
