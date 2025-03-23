@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'enable' => env('CLOCKWORK_ENABLE', null),
+    'enable' => env('CLOCKWORK_ENABLE'),
 
     /*
     |------------------------------------------------------------------------------------------------------------------
@@ -368,9 +368,8 @@ return [
 
     // A list of classes that will never be serialized (e.g. a common service container class)
     'serialization_blackbox' => [
-        \Illuminate\Container\Container::class,
-        \Illuminate\Foundation\Application::class,
-        \Laravel\Lumen\Application::class,
+        Illuminate\Container\Container::class,
+        Illuminate\Foundation\Application::class,
     ],
 
     /*

@@ -17,7 +17,7 @@
             {{-- Array Of Links --}}
             @if (is_array($element))
                 @foreach ($element as $page => $url)
-                    @if ($page == $paginator->currentPage())
+                    @if ((int) $page === (int) $paginator->currentPage())
                         <a class="layui-laypage-curr">
                             <em class="layui-laypage-em"></em>
                             <em>{{ $page }}</em>

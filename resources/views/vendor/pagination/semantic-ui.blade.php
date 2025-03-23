@@ -4,7 +4,9 @@
         @if ($paginator->onFirstPage())
             <a class="icon item disabled"> <i class="left chevron icon"></i> </a>
         @else
-            <a class="icon item" href="{{ $paginator->previousPageUrl() }}" rel="prev"> <i class="left chevron icon"></i> </a>
+            <a class="icon item" href="{{ $paginator->previousPageUrl() }}" rel="prev">
+                <i class="left chevron icon"></i>
+            </a>
         @endif
 
         {{-- Pagination Elements --}}
@@ -17,7 +19,7 @@
             {{-- Array Of Links --}}
             @if (is_array($element))
                 @foreach ($element as $page => $url)
-                    @if ($page == $paginator->currentPage())
+                    @if ((int) $page === (int) $paginator->currentPage())
                         <a class="item active" href="{{ $url }}">{{ $page }}</a>
                     @else
                         <a class="item" href="{{ $url }}">{{ $page }}</a>
@@ -28,7 +30,9 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <a class="icon item" href="{{ $paginator->nextPageUrl() }}" rel="next"> <i class="right chevron icon"></i> </a>
+            <a class="icon item" href="{{ $paginator->nextPageUrl() }}" rel="next">
+                <i class="right chevron icon"></i>
+            </a>
         @else
             <a class="icon item disabled"> <i class="right chevron icon"></i> </a>
         @endif

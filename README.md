@@ -22,7 +22,7 @@
 php : >=8.2
 ```
 
-### 高性能
+### Octane 运行加速
 
 laravel octane 安装
 
@@ -37,7 +37,7 @@ php artisan octane:install
 php artisan octane:start
 ```
 
-使用 frankenphp /wrk 之后的测试结果, 10 线程, 并发 100 请求, 平均响应时间 46ms
+使用 frankenphp 运行并使用 wrk 运行压测之后的测试, 10 线程, 并发 100 请求, 平均响应时间 46ms
 
 ```
 wrk -c 100 -t 10 http://127.0.0.1:8000/test
