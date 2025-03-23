@@ -31,7 +31,7 @@ laravel octane 安装
 composer require laravel/octane
 composer require guzzlehttp/guzzle
 
-# 清理服务 / 启用代理 / 安装 octane
+# 清理 services.php / 安装 octane / 启动 octane
 composer run weiran-update
 php artisan octane:install
 php artisan octane:start
