@@ -1,5 +1,3 @@
-# 说明
-
 本项目是基于 Laravel 10.x 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 管理, 组件, 使用 composer 进行模块化安装
 
 - 项目文档 : https://weiran.tech
@@ -18,10 +16,39 @@
 
 项目是在通用业务逻辑的基础上剥离出来, 并可应用在快速开发的项目中, 可满足日常 80% 的开发需求
 
-## 环境
+### 环境
 
 ```
 php : >=8.2
+```
+
+### 高性能
+
+laravel octane 安装
+
+```
+# 安装 octane
+composer require laravel/octane
+composer require guzzlehttp/guzzle
+
+# 清理服务 / 启用代理 / 安装 octane
+composer run weiran-update
+php artisan octane:install
+php artisan octane:start
+```
+
+使用 frankenphp /wrk 之后的测试结果, 10 线程, 并发 100 请求, 平均响应时间 46ms
+
+```
+wrk -c 100 -t 10 http://127.0.0.1:8000/test
+Running 10s test @ http://127.0.0.1:8000/test
+  10 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    46.73ms   21.38ms 265.22ms   81.50%
+    Req/Sec   221.04     47.20   356.00     73.13%
+  22043 requests in 10.09s, 24.63MB read
+Requests/sec:   2184.06
+Transfer/sec:      2.44MB
 ```
 
 ## 安装
