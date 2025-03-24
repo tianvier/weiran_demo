@@ -20,7 +20,6 @@
         "ext-mbstring": "*",
         "ext-bcmath": "*",
         "laravel/framework": "10.*",
-        "intervention/image": "2.*",
         "laravelcollective/html": "6.*",
         "weiran/framework": "1.0.x-dev",
         "weiran/system": "1.0.x-dev",
