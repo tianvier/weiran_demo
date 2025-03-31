@@ -1,4 +1,4 @@
-本项目是基于 Laravel 10.x 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 管理, 组件, 使用 composer 进行模块化安装
+本项目是基于 Laravel 10.x 的模块化开发框架, 项目为了便于管理分为 框架, 核心, 组件, 使用 composer 进行模块化安装
 
 - 项目文档 : https://weiran.tech
 
@@ -7,11 +7,9 @@
 使用本项目可以快速的完成项目业务逻辑的开发, 其中包含
 
 - RBAC 权限管理
-- 完整的后台管理框架
 - 用户管理
 - 接口验签
 - 接口文档 swagger 格式生成
-- 快速表单生成
 - 支持 Laravel Octane 运行加速
 
 项目是在通用业务逻辑的基础上剥离出来, 并可应用在快速开发的项目中, 可满足日常 80% 的开发需求
@@ -202,13 +200,6 @@ $ php artisan core:doc api
 
 生成的 swagger 文件在 `public/docs/swagger-ui` 目录下, 访问 http://localhost:8000/docs/swagger-ui/ 可在线查看接口文档
 
-## 登录
-
-**登录后台**
-
-http://127.0.0.1:8000/mgr-page
-
-![](./resources/docs/images/mgr-login.jpg)
 
 ## 反馈
 

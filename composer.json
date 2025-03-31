@@ -23,8 +23,7 @@
         "laravelcollective/html": "6.*",
         "weiran/framework": "1.0.x-dev",
         "weiran/system": "1.0.x-dev",
-        "weiran/core": "1.0.x-dev",
-        "weiran/mgr-page": "1.0.x-dev"
+        "weiran/core": "1.0.x-dev"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
