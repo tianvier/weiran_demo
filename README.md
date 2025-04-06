@@ -55,7 +55,7 @@ Transfer/sec:      2.44MB
 
 ```
 # Install
-$ composer create-project weiran/project weiran_v1 '^1.0.0-dev'
+$ composer create-project weiran/project weiran_v1 '^1.0.x-dev'
 
 # Start service server
 $ cd weiran_v1
@@ -87,6 +87,18 @@ test 模块不支持自动加载, 需要手动加载
         }
     }
 }
+```
+
+在 `config/app.php` 文件的 `providers` 中加入服务加载器
+
+```php
+<?php
+
+return [
+    'providers' => [
+        Test\ServiceProvider::class
+    ]
+]
 ```
 
 运行 `composer dumpautoload` 生成类加载文件
@@ -199,7 +211,6 @@ $ php artisan core:doc api
 ```
 
 生成的 swagger 文件在 `public/docs/swagger-ui` 目录下, 访问 http://localhost:8000/docs/swagger-ui/ 可在线查看接口文档
-
 
 ## 反馈
 
