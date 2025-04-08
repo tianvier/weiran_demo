@@ -64,7 +64,6 @@ _ide_helper_models.php
 .phpunit.result.cache
 .phpstorm.meta.php
 /storage/clockwork/index
-
 **/caddy
-frankenphp
-frankenphp-worker.php
+/frankenphp
+/public/frankenphp-worker.php
