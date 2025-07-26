@@ -26,7 +26,6 @@ return [
         'string'  => ':attribute 长度必须在:min - :max 之间',
     ],
     'confirmed'        => ':attribute 必须一致',
-    'date'             => ':attribute 必须是合法的日期',
     'date_format'      => ':attribute 必须符合格式 :format',
     'different'        => ':attribute 必须和 :other 不同',
     'digits'           => ':attribute 位数必须是 :digits',
@@ -63,10 +62,20 @@ return [
     ],
     'unique'           => ':attribute 已经存在了',
     'url'              => ':attribute 格式不正确',
-    'mobile'           => ':attribute 格式不正确',
     'password'         => ':attribute 格式不正确',
     'string'           => ':attribute 必须是字符串',
-    'chid'             => ':attribute 格式不正确',
+
+
+    // custom rule
+    'mobile'           => ':attribute 格式不正确',
+    'json'             => ':attribute 须是标准的JSON 格式',
+    'date'             => ':attribute 必须是合法的日期',
+    'chid'             => ':attribute 必须是正确的身份证号',
+    'simple_pwd'       => ':attribute 输入的密码必须符合规范',
+    'username'         => ':attribute 必须是正确的用户名的格式',
+    'date_range'       => ':attribute 不是正确的时间范围',
+    'urls'             => ':attribute 必须全部是图片地址, 请等待上传完成, 或者删除未上传成功的图片',
+    'captcha'          => ':attribute 不正确',
 
     /*
     |--------------------------------------------------------------------------
@@ -100,8 +109,6 @@ return [
         'captcha'  => '验证码',
         'nickname' => '昵称',
         'sex'      => '性别',
-        // cat
-        'cat_id'   => '分类',
     ],
 
 ];
