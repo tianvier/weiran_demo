@@ -1,0 +1,9 @@
+{
+    "name": "misc",
+    "slug": "misc",
+    "version": "1.0",
+    "description": "This is the description for the weiran misc module.",
+    "autoload": [
+        "src/classes/functions.php"
+    ]
+}

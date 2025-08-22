@@ -1,89 +1,97 @@
 {
-    "name": "weiran/project",
-    "type": "project",
-    "description": "The Weiran Project Starter",
-    "keywords": [
-        "framework",
-        "laravel",
-        "weiran"
-    ],
-    "license": "MIT",
-    "require": {
-        "php": "^8.2",
-        "ext-dom": "*",
-        "ext-json": "*",
-        "ext-simplexml": "*",
-        "ext-openssl": "*",
-        "ext-pdo": "*",
-        "ext-gd": "*",
-        "ext-curl": "*",
-        "ext-mbstring": "*",
-        "ext-bcmath": "*",
-        "laravel/framework": "10.*",
-        "laravelcollective/html": "6.*",
-        "weiran/framework": "1.0.*",
-        "weiran/system": "1.0.*",
-        "weiran/core": "1.0.*"
-    },
-    "require-dev": {
-        "roave/security-advisories": "dev-latest",
-        "doctrine/dbal": "^3.0",
-        "itsgoingd/clockwork": "^5.1",
-        "phpunit/phpunit": "^10.0",
-        "barryvdh/laravel-ide-helper": "^3.0",
-        "poppy/faker": "10.0.x-dev",
-        "zircote/swagger-php": "^5.0"
-    },
-    "autoload": {
-        "classmap": [
-        ],
-        "psr-4": {
-            "App\\": "modules/app/src"
-        }
-    },
-    "autoload-dev": {
-        "classmap": [
-        ],
-        "psr-4": {
-            "Weiran\\ProjectResources\\Docs\\": "resources/docs"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": [
-                "laravelcollective/html"
-            ]
-        }
-    },
-    "scripts": {
-        "weiran-init": [
-            "@php artisan weiran:migrate",
-            "@php artisan system:install",
-            "@php artisan system:user create_user"
-        ],
-        "weiran-update": [
-            "./vendor/bin/weiran",
-            "@php artisan weiran:optimize",
-            "@php artisan vendor:publish --force --tag=weiran-assets",
-            "@php artisan core:permission init"
-        ],
-        "post-install-cmd": [
-            "@php artisan ide-helper:generate"
-        ],
-        "post-update-cmd": [
-            "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi",
-            "@php artisan jwt:secret --force",
-            "@php artisan vendor:publish --force --tag=weiran-assets"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist"
-    }
+	"name": "weiran/project",
+	"type": "project",
+	"description": "The Weiran Project Starter",
+	"keywords": [
+		"framework",
+		"laravel",
+		"weiran"
+	],
+	"license": "MIT",
+	"require": {
+		"php": "^8.2",
+		"ext-dom": "*",
+		"ext-json": "*",
+		"ext-simplexml": "*",
+		"ext-openssl": "*",
+		"ext-pdo": "*",
+		"ext-gd": "*",
+		"ext-curl": "*",
+		"ext-mbstring": "*",
+		"ext-bcmath": "*",
+		"laravel/framework": "10.*",
+		"laravelcollective/html": "6.*",
+		"weiran/framework": "1.0.*",
+		"weiran/system": "1.0.*",
+		"weiran/core": "1.0.*",
+		"inertiajs/inertia-laravel": "^2.0",
+		"weiran/mgr-page": "1.0.*"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-latest",
+		"doctrine/dbal": "^3.0",
+		"itsgoingd/clockwork": "^5.1",
+		"phpunit/phpunit": "^10.0",
+		"barryvdh/laravel-ide-helper": "^3.0",
+		"poppy/faker": "10.0.x-dev",
+		"zircote/swagger-php": "^5.0"
+	},
+	"autoload": {
+		"classmap": [
+		],
+		"psr-4": {
+			"Misc\\": "modules/misc/src"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+		],
+		"psr-4": {
+			"Weiran\\ProjectResources\\Docs\\": "resources/docs"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"dont-discover": [
+				"laravelcollective/html"
+			]
+		}
+	},
+	"scripts": {
+		"weiran-init": [
+			"@php artisan weiran:migrate",
+			"@php artisan system:install",
+			"@php artisan system:user create_user"
+		],
+		"weiran-update": [
+			"./vendor/bin/weiran",
+			"@php artisan weiran:optimize",
+			"@php artisan vendor:publish --force --tag=weiran-assets",
+			"@php artisan core:permission init"
+		],
+		"post-install-cmd": [
+			"@php artisan ide-helper:generate"
+		],
+		"post-update-cmd": [
+			"@php artisan ide-helper:generate",
+			"@php artisan ide-helper:meta"
+		],
+		"post-root-package-install": [
+			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		],
+		"post-create-project-cmd": [
+			"@php artisan key:generate --ansi",
+			"@php artisan jwt:secret --force",
+			"@php artisan vendor:publish --force --tag=weiran-assets"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packeton.kejinxia.com"
+		}
+	]
 }
