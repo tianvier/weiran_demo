@@ -83,11 +83,11 @@ test 模块不支持自动加载, 需要手动加载
 
 ```json
 {
-    "autoload": {
-        "psr-4": {
-            "\\Test\\": "modules/test/src"
-        }
-    }
+	"autoload": {
+		"psr-4": {
+			"\\Test\\": "modules/test/src"
+		}
+	}
 }
 ```
 
@@ -214,22 +214,33 @@ $ php artisan core:doc api
 
 生成的 swagger 文件在 `public/docs/swagger-ui` 目录下, 访问 http://localhost:8000/docs/swagger-ui/ 可在线查看接口文档
 
-
 **编辑前端 vue 代码**
 
-前端代码入口文件在 `resources/js` 目录下, 使用 vite 进行编译, 可以使用以下命令进行编译
+- 前端代码入口文件在 `resources/js` 目录下, 使用 vite 进行编译, 可以使用以下命令进行编译
+
 ```
 npm run dev
 ```
 
 **发布 VUE代码**
+
 ```
 npm run build
 ```
-会自动将编译后的代码发布到 `public/build` 目录下, 可以直接访问
 
+- 会自动将编译后的代码发布到 `public/build` 目录下, 可以直接访问
 
+### 主要增加
 
+- 升级`mix`到`vite`
+- 引入 `laravel inertia` 作为前端框架 [https://inertiajs.com/pages](https://inertiajs.com/pages)
+- 引入 `vue3` + `typescript` 作为前端开发语言, 可使用vue3 composition api 进行开发
+- 引入 `element-plus` 作为前端组件库
+- 引入 `tailwindcss` 作为前端样式库
+
+## 使用demo
+ - php`modules/misc/src/Http/Request/Web/DemoController.php`
+ - vue`resources/js/pages/demo/index.vue`
 
 ## 反馈
 

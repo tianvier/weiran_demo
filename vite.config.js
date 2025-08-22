@@ -16,6 +16,7 @@ export default defineConfig({
 				'modules/**/resources/views/**/*.blade.php',
 				'modules/**/resources/js/**/*.vue',
 				'resources/views/**/*.blade.php',
+				'resources/views/*.blade.php',
 				'resources/js/**/*.vue',
 				'resources/assets/style/**/*.less',
 				'resources/assets/style/**/*.css',
