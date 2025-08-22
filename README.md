@@ -214,6 +214,23 @@ $ php artisan core:doc api
 
 生成的 swagger 文件在 `public/docs/swagger-ui` 目录下, 访问 http://localhost:8000/docs/swagger-ui/ 可在线查看接口文档
 
+
+**编辑前端 vue 代码**
+
+前端代码入口文件在 `resources/js` 目录下, 使用 vite 进行编译, 可以使用以下命令进行编译
+```
+npm run dev
+```
+
+**发布 VUE代码**
+```
+npm run build
+```
+会自动将编译后的代码发布到 `public/build` 目录下, 可以直接访问
+
+
+
+
 ## 反馈
 
 [Github Issues](https://github.com/weiran-tech/project/issues)
