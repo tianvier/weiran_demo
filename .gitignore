@@ -67,3 +67,6 @@ _ide_helper_models.php
 **/caddy
 /frankenphp
 /public/frankenphp-worker.php
+
+.vscode
+public/hot

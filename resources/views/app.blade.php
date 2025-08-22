@@ -7,7 +7,6 @@
     @include('misc::tpl._js_css', [
         '_type' => ['layui']
     ])
-    @vite(['resources/js/app.js'])
 @endsection
 @section('body-class', 'new_ui')
 @section('body-main')

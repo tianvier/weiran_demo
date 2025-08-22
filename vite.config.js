@@ -8,9 +8,8 @@ export default defineConfig({
 	plugins: [
 		laravel({
 			input: [
+				'resources/js/app.js',
 				'resources/assets/style/style.less',
-				'resources/assets/style/app.css',
-				'resources/js/app.js'
 			],
 			refresh: [
 				'modules/**/src/request/**/*.php',
@@ -37,16 +36,16 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'resources/js'),
-			'@modules': path.resolve(__dirname, 'modules')
+			'@modules': path.resolve(__dirname, 'modules'),
+			'@resources': path.resolve(__dirname, 'resources'),
 		},
 	},
 	build: {
 		manifest: 'manifest.json',
 		rollupOptions: {
 			input: [
-				'resources/assets/style/style.less',
-				'resources/assets/style/app.css',
-				'resources/js/app.js'
+				'resources/js/app.js',
+				'resources/assets/style/style.less'
 			],
 		},
 		assetsDir: '',

@@ -8,14 +8,6 @@
       "resources/js/app.js"
     ]
   },
-  "resources/assets/style/app.css": {
-    "file": "app-CPbjcgbi.css",
-    "src": "resources/assets/style/app.css",
-    "isEntry": true,
-    "names": [
-      "app.css"
-    ]
-  },
   "resources/assets/style/style.less": {
     "file": "style-CxYt-lIO.css",
     "src": "resources/assets/style/style.less",

@@ -1,9 +1,6 @@
 @extends('misc::web.tpl.base')
 @section('title', $_title ?? '')
 @section('description', $_description ?? '')
-@section('head-css')
-    @vite(['resources/assets/style/style.less', 'resources/assets/style/app.css'])
-@endsection
 @section('head-content')
     @include('misc::tpl._js_css', [
         '_type' => ['layui']

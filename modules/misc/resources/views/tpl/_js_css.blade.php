@@ -15,4 +15,6 @@ $_type = $_type ?? [];
     {!! Html::style('assets/libs/boot/style.css?v=2025-01-19') !!}
 @endif
 
-@vite(['resources/assets/style/style.less', 'resources/assets/style/app.css'])
+@once
+    @vite(['resources/js/app.js','resources/assets/style/style.less'])
+@endonce
